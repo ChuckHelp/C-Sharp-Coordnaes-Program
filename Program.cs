@@ -11,6 +11,7 @@ namespace Coordinates
             foreach (var arg in args)
             {
                 Console.WriteLine($"arg{i} = {args[i]}");
+                i++;
             }
 
 
