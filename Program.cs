@@ -6,6 +6,13 @@ namespace Coordinates
     {
         static void Main(string[] args)
         {
+            int i = 0;
+            Console.WriteLine($"The count of input arguments is {args.Length}");
+            foreach (var arg in args)
+            {
+                Console.WriteLine($"arg{i} = {args[i]}");
+            }
+
 
             Console.WriteLine("The values of X coordinate and Y coordiantes are:");
             LabII_OOP.Coordinates cood = new LabII_OOP.Coordinates(1, 0);
