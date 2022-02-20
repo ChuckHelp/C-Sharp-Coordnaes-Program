@@ -1,4 +1,4 @@
-﻿using System;
+﻿using LabII_OOP;
 
 namespace Coordinates
 {
@@ -13,19 +13,19 @@ namespace Coordinates
             Console.WriteLine("                                                  ");
 
 
-            Coordinates.Shapes.Circle c1 = new Coordinates.Shapes.Circle(cood, 15, 200);
+            Circle c1 = new Circle(cood, 15, 200);
             Console.WriteLine("The Area of circle 1:{0}", c1.GetArea());
             Console.WriteLine("The Shape Score of circle 1:{0}", c1.GetShapeScore());
 
-            Coordinates.Shapes.Circle c2 = new Coordinates.Shapes.Circle(cood, 13, 100);
+            Circle c2 = new Circle(cood, 13, 100);
             Console.WriteLine("The Area of circle 2:{0}", c2.GetArea());
             Console.WriteLine("The Shape Score of circle 2:{0}", c2.GetShapeScore());
 
-            Coordinates.Shapes.Square s1 = new Coordinates.Shapes.Square(cood, 20, 300);
+            Square s1 = new Square(cood, 20, 300);
             Console.WriteLine("The Area of square 1 is:{0}", s1.GetArea());
             Console.WriteLine("The Shape Score of square 1 is:{0}", s1.GetShapeScore());
 
-            Coordinates.Shapes.Square s2 = new Coordinates.Shapes.Square(cood, 8, 400);
+            Square s2 = new Square(cood, 8, 400);
             Console.WriteLine("The Area of square 2 is:{0}", s2.GetArea());
             Console.WriteLine("The Shape Score of square 2 is:{0}", s2.GetShapeScore());
 
