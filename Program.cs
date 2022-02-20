@@ -8,7 +8,7 @@ namespace Coordinates
         {
 
             Console.WriteLine("The values of X coordinate and Y coordiantes are:");
-            Coordinates cood = new Coordinates(1, 0);
+            LabII_OOP.Coordinates cood = new LabII_OOP.Coordinates(1, 0);
             cood.Display();
             Console.WriteLine("                                                  ");
 
@@ -42,84 +42,5 @@ namespace Coordinates
             Console.ReadKey();
         }
         //Coordinate class starts here
-        public class Coordinates
-        {
-
-            //member variables
-            public int xcoord;
-            public int ycoord;
-
-            public Coordinates(int xcoord, int ycoord)
-            {
-                this.xcoord = xcoord;
-                this.ycoord = ycoord;
-            }
-            public void Display()
-            {
-                Console.WriteLine("X_Coordinate is:{0}", xcoord);
-                Console.WriteLine("Y_Coordinate is:{0}", ycoord);
-            }
-
-
-            //Shapes class starts here
-            public abstract class Shapes
-            {
-                public int Lenght;
-                public int instancePoints;
-                double Area;
-                double typePoints;
-                Coordinates coord;
-                public abstract double GetArea();
-                public abstract double GetShapeScore();
-
-                public class Circle : Shapes
-                {
-                    public Circle(Coordinates cood, int lenght, int InstancePoints)
-                    {
-                        this.Lenght = lenght;
-                        this.instancePoints = InstancePoints;
-                        this.coord = cood;
-                        Area = GetArea();
-                        typePoints = GetShapeScore();
-                    }
-                    public double GetTypePoints()
-                    {
-                        return 2;
-                    }
-                    public override double GetArea()
-                    {
-
-                        return (Lenght * Lenght) / (4 * Math.PI);
-                    }
-                    public override double GetShapeScore()
-                    {
-                        return (GetTypePoints() * (instancePoints) / Area);
-                    }
-                }
-                public class Square : Shapes
-                {
-                    public Square(Coordinates cood, int lenght, int InstancePoints)
-                    {
-                        this.Lenght = lenght;
-                        this.instancePoints = InstancePoints;
-                        this.coord = cood;
-                        Area = GetArea();
-                        typePoints = GetShapeScore();
-                    }
-                    public double GetTypePoints()
-                    {
-                        return 1;
-                    }
-                    public override double GetArea()
-                    {
-                        return Lenght / 4 * Lenght / 4;
-                    }
-                    public override double GetShapeScore()
-                    {
-                        return (GetTypePoints() * ((instancePoints) / GetArea()));
-                    }
-                }
-            } //Shapes class ends by here
-        } //end class Coordinates
     }
 }
