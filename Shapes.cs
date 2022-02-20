@@ -7,7 +7,7 @@
         public int instancePoints;
         protected double Area;
         protected double typePoints;
-        protected Coordinates coord;
+        protected Coordinates? coord;
         public abstract double GetArea();
         public abstract double GetShapeScore();
 
